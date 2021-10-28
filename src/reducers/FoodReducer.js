@@ -1,9 +1,9 @@
-export const productReducer = (state, action) => {
+export const foodReducer = (state, action) => {
     switch (action.type) {
-        case "FETCH_PRODUCTS":
+        case "FETCH_FOODS":
             return {
                 ...state,
-                products: action.payload
+                foods: action.payload
             };
 
 
