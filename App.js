@@ -7,6 +7,7 @@ import COLORS from './src/consts/colors';
 import DetailsScreen from './src/views/screens/DetailsScreen';
 import BottomNavigator from './src/views/navigation/BottomNavigator';
 import OnBoardScreen from './src/views/screens/OnBoardScreen';
+import FoodContext from './src/contexts/FoodContextProvider';
 
 const Stack = createStackNavigator();
 
@@ -23,4 +24,13 @@ const App = () => {
   );
 };
 
-export default App;
+
+const AppContext = () => {
+  return (
+    <FoodContext>
+      <App />
+    </FoodContext>
+  )
+}
+
+export default AppContext;
